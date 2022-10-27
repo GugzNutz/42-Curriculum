@@ -1,0 +1,20 @@
+#include <string.h>
+#include <stdio.h>
+
+void	ft_memset(void *s, int c, int n)
+{
+	while (n > 0)
+	{
+		*s = c;
+		s++;
+		n--;
+	}
+	return (s);
+}
+
+int	main()
+{
+	void a[] = "O Artur so joga de soujorn";
+
+	printf("%s", ft_memset(*a, 5, 3));
+}
