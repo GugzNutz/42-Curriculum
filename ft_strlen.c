@@ -6,13 +6,14 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:17:17 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/02 13:53:18 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/02 17:38:29 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-int	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	int	a;
 

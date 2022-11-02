@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 13:43:25 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/02 15:04:40 by gfilipe-         ###   ########.fr       */
+/*   Created: 2022/11/02 17:54:37 by gfilipe-          #+#    #+#             */
+/*   Updated: 2022/11/02 17:58:11 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*calloc(size_t nmemb, size_t size)
 {
-	unsigned char	ch;
-	unsigned char	*str;
-	size_t			i;
-
-	i = 0;
-	str = (unsigned char *)s;
-	ch = (unsigned char)c;
-	while (i < n)
-	{
-		if (*str == ch)
-		{
-			return (str);
-		}
-		i++;
-		str++;
-	}
-	return (NULL);
+	
 }
