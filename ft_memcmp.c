@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 14:16:50 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/02 12:21:15 by gfilipe-         ###   ########.fr       */
+/*   Created: 2022/11/02 14:13:42 by gfilipe-          #+#    #+#             */
+/*   Updated: 2022/11/02 14:50:33 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/nfs/homes/gfilipe-/Desktop/libft.a/libft.h"
+#include <string.h>
+#include "libft.h"
 
-int	ft_isascii(int c)
+int	memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
+	unsigned char	*str1;
+	unsigned char	*str2;
+
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	while (n > 0)
+	{
+		if (*str1 != *str2)
+		{
+			return ((*str1 - *str2));
+		}
+		str1++;
+		str2++;
+		n--;
+	}
 	return (0);
 }

@@ -3,20 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:16:35 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/10/30 14:35:57 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/02 12:19:39 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "/nfs/homes/gfilipe-/Desktop/libft.a/libft.h"
 
 void	ft_bzero(void *s, int n)
 {
-	unsigned char *ptr = s;
+	unsigned char	*ptr;
 
-	while(n > 0)
+	ptr = *s;
+	while (n > 0)
 	{
 		*ptr = '\n';
 		ptr++;

@@ -3,16 +3,13 @@
 
 int ft_toupper(int c)
 {
-    if(c >= 'A' && c <= 'Z')
-    c += 32;
-    else if(c >= 'a' && c <= 'z')
-    c -= 32;
+    if((c >= 'a' && c <= 'z'))
+    return (c - 32);
     else
     return (c);
 }
-
-int main()
+/*int main()
 {
-    printf("%d", ft_toupper(65));
+    printf("%d", ft_toupper(97));
     return (0);   
-}
+}*/
