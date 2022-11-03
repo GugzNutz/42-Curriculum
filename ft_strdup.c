@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 09:44:26 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/03 09:44:39 by gfilipe-         ###   ########.fr       */
+/*   Created: 2022/11/03 09:16:26 by gfilipe-          #+#    #+#             */
+/*   Updated: 2022/11/03 10:07:52 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
-#include "stdio.h"
 
-int ft_toupper(int c)
+char	*ft_strdup(const char *s)
 {
-    if((c >= 'a' && c <= 'z'))
-    return (c - 32);
-    else
-    return (c);
+	static char	*ptr;
+	char		*ptr_value;
+
+	ptr = malloc(sizeof(char) * ft_strlen((char *)s) + 1);
+	if (ptr == NULL)
+		return (NULL);
+	ptr_value = ptr;
+	while (*s)
+	{
+		*ptr_value = *s;
+		ptr_value++;
+		s++;
+	}
+	*ptr_value = '\0';
+	return (ptr);
 }
-/*int main()
-{
-    printf("%d", ft_toupper(97));
-    return (0);   
-}*/
+
