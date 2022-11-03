@@ -13,7 +13,8 @@ CFLAGS = -Wall -Wextra -Werror
 CC = gcc
 clean:
 	rm -f $(OBJS)
-fclean: clean
+# Do i need this fclean?
+fclean: clean 
 		$(OBJS)
 
 re: fclean all

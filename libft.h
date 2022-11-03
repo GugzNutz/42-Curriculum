@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:16:14 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/03 13:15:43 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/03 14:02:53 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 
 int	ft_tolower(int c);
@@ -43,6 +44,8 @@ void	*ft_calloc(size_t nmemb, size_t size);
 
 //Part 2 Functions
 
-void    ft_putstr_fd(char *s, int fd);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
