@@ -6,13 +6,10 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 09:16:26 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/03 11:47:16 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/03 15:09:59 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

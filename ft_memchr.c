@@ -6,11 +6,10 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 13:43:25 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/02 15:04:40 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/03 15:09:43 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
