@@ -6,11 +6,11 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:16:41 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/02 12:20:39 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:14:04 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/nfs/homes/gfilipe-/Desktop/libft.a/libft.h"
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

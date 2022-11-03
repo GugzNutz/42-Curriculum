@@ -6,11 +6,11 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:16:50 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/02 12:21:15 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:14:17 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/nfs/homes/gfilipe-/Desktop/libft.a/libft.h"
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

@@ -6,14 +6,11 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:09:35 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/02 12:27:40 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:46:28 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include "/nfs/homes/gfilipe-/Desktop/libft.a/libft.h"
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

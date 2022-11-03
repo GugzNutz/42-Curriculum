@@ -6,13 +6,14 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:16:35 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/03 09:04:19 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:13:07 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-void	ft_bzero(void *s, int n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
 

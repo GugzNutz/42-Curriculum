@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 17:39:50 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/02 17:54:06 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:31:02 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 int	ft_atoi(const char *str)
 {
 	unsigned int	i;
-	int	neg;
-	int	result;
+	int				neg;
+	int				result;
 
 	i = 0;
 	neg = 1;
