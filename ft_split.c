@@ -1,49 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 15:11:33 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/08 10:36:28 by gfilipe-         ###   ########.fr       */
+/*   Created: 2022/11/08 10:41:45 by gfilipe-          #+#    #+#             */
+/*   Updated: 2022/11/08 11:50:00 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+int	array(char *word, char c)
 {
-	size_t	counter;
 	int	i;
-	int	j;
-	char	*s2;
+	int	counter;
 
-	counter = 0;
 	i = 0;
-	j = 0;
-	s2 =(char *) s1;
-	if (set[i] == '\0')
-		return (NULL);
-	while (counter < ft_strlen(set))
+	counter = 0;
+	while(word[i])
 	{
-		if (s2[i] == set[j])
+		if (word[i] != c)
 		{
-			s2[i] = 0;
-			counter++;
-			j++;
 			i++;
 		}
-		else if (s2[ft_strlen(s2) - i] == set[j])
+		else if (word[i] == c)
 		{
-			s2[ft_strlen(s2) - i] = 0;
-			counter++;
-			j++;
 			i++;
+			counter++;
 		}
-		else
-			break;
 	}
-	s2 = malloc(sizeof(char) * ft_strlen(s2));
-		return (s2);
+	return (counter);
+}
+
+int sarray(char *word, char c)
+{
+	int	i;
+
+	i = 0;
+	while()
+}
+
+char	**ft_split(char const *s, char c)
+{
+	**split;
+
+	*split = malloc(sizeof(array(s,c)));
+
 }

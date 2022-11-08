@@ -5,7 +5,7 @@ LIBRARY = libft.a
 SRC = $(wildcard *.c)
 OBJS = $(SRC:.c=.o)
 # Phony lists non-physical targets that are out of date
-# Because of that they are always executed, norma all and clean
+# Because of that they are always executed, normally all and clean
 .PHONY: all clean
 # All TARGET
 all: $(OBJS)
