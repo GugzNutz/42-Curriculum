@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 15:11:33 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/08 10:36:28 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/08 17:29:19 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	counter;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*s2;
 
 	counter = 0;
 	i = 0;
 	j = 0;
-	s2 =(char *) s1;
+	s2 = (char *) s1;
 	if (set[i] == '\0')
 		return (NULL);
 	while (counter < ft_strlen(set))
@@ -42,8 +42,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 			i++;
 		}
 		else
-			break;
+		break;
 	}
 	s2 = malloc(sizeof(char) * ft_strlen(s2));
-		return (s2);
+	return (s2);
 }

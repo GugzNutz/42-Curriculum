@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:16:35 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/03 15:09:31 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/08 16:20:53 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ptr;
+	size_t	i;
 
-	ptr = (unsigned char *)s;
-	while (n > 0)
+	i = 0;
+	while (i < n)
 	{
-		*ptr = '\n';
-		ptr++;
-		n--;
+		((unsigned char *)s)[i] = '\0';
+		i++;
 	}
 }
-/*
-int	main()
-{
-	char a[] = "mi llamo juan";
-	ft_bzero(a, 1);
-	printf("%s", a);
-	return (0);
-}*/

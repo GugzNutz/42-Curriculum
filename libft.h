@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:16:14 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/08 11:49:57 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/08 14:38:32 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);
@@ -46,7 +47,7 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
-char	**ft_split(char const *s, char c);
+/*char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned
 int, char));
@@ -71,5 +72,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list 	*ft_lstmap(t_list *lst, void *(*f)(void *),
 void (*del)(void *));
-
+*/
 #endif
