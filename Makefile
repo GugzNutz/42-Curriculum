@@ -6,7 +6,7 @@
 #    By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 14:42:52 by gfilipe-          #+#    #+#              #
-#    Updated: 2022/11/08 16:11:03 by gfilipe-         ###   ########.fr        #
+#    Updated: 2022/11/08 17:42:32 by gfilipe-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,10 +25,8 @@ FLAGS = -Wall -Wextra -Werror
 # All TARGET
 .c.o: 
 	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
-
 $(NAME):  ${OBJS}
 	ar rcs ${NAME} ${OBJS}
-
 all: ${NAME}
 
 clean:
