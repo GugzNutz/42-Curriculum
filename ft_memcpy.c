@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:17:01 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/03 12:35:30 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/10 10:15:20 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 	s = (unsigned char *)src;
 	d = (unsigned char *)dest;
 	i = 0;
+	if (s == NULL && d == NULL)
+		return (NULL);
 	while (n > 0)
 	{
 		d[i] = s[i];
