@@ -6,24 +6,24 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:41:45 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/08 16:13:24 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/14 09:23:39 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	array(char *word, char c)
+int	ft_words(char const *word, char c)
 {
 	int	i;
 	int	counter;
 
 	i = 0;
 	counter = 0;
-	while(word[i])
+	while(word[i] && word)
 	{
 		if (word[i] != c)
 		{
-			i++;
+			counter++;
 		}
 		else if (word[i] == c)
 		{

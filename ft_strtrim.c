@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 15:11:33 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/08 17:29:19 by gfilipe-         ###   ########.fr       */
+/*   Created: 2022/11/10 15:21:07 by gfilipe-          #+#    #+#             */
+/*   Updated: 2022/11/14 09:24:36 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,23 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	counter;
-	int		i;
-	int		j;
-	char	*s2;
+	int		start;
+	int		len;
+	char	*str;
 
-	counter = 0;
-	i = 0;
-	j = 0;
-	s2 = (char *) s1;
-	if (set[i] == '\0')
+	len = ft_strlen(s1);
+	start = 0;
+	if (!s1 || !set)
 		return (NULL);
-	while (counter < ft_strlen(set))
-	{
-		if (s2[i] == set[j])
-		{
-			s2[i] = 0;
-			counter++;
-			j++;
-			i++;
-		}
-		else if (s2[ft_strlen(s2) - i] == set[j])
-		{
-			s2[ft_strlen(s2) - i] = 0;
-			counter++;
-			j++;
-			i++;
-		}
-		else
-		break;
-	}
-	s2 = malloc(sizeof(char) * ft_strlen(s2));
-	return (s2);
+	while (ft_strchr(set, s1[start]) && start <= len)
+		start++;
+	if (start > len)
+		return (ft_strdup(s1 + len));
+	while (ft_strchr(set, s1[len]) && start < len)
+		len--;
+	str = malloc(len - start + 2);
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, &s1[start], len - start + 2);
+	return (str);
 }
