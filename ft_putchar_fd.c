@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 11:39:37 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/14 11:59:09 by gfilipe-         ###   ########.fr       */
+/*   Created: 2022/11/14 11:58:13 by gfilipe-          #+#    #+#             */
+/*   Updated: 2022/11/14 12:30:19 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-	size_t	i;
-	size_t	len;
-
-	i = 0;
-	len = ft_strlen(s);
-	if (s != NULL && f != NULL)
-	{
-		while (i < len)
-		{
-			/*takes the adress of each character of the string and pass it into the function f
-			https://jraleman.medium.com/c-programming-language-passing-a-function-as-a-parameter-90d52fe842ea*/
-			f(i, &s[i]);
-			i++;
-		}
-	}
+void	ft_putchar_fd(char c, int fd)
+/*First parameter is file descriptor, if it was one it represented the output
+device screen, second parameter is the buffer data, the third parameter is
+the count number for the data given in the buffer parameter
+basically, if it's 2 it will only write the first two bytes of 
+the buffer data and ignore the rest of the bytes*/{
+	write(fd, &c, 1);
 }
