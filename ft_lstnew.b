@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:03:10 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/14 18:35:56 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:37:33 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 // . is a member operator, -> is a structure pointer operator
 t_list	*ft_lstnew(void *content)
 {
-	return (0);
+	t_list	*file;
+	
 }
 /*t_list	*link;
 
