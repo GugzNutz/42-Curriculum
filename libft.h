@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:16:14 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/15 17:27:55 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/16 18:36:03 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,19 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+/*Need to use typedef and not just struct otherwise i get a compiler errors, s_list is the structure tag
+and it is used to identify a particular kind of structure(neso academy video 152)*/
 
+/*typedef gives us more freedom by allowing us to create our own types "typedef int INT" int is the
+existing data type and INT is the new data type*/
 typedef struct s_list
 {
-    void                    *content;
-    size_t                  content_size;
+    void    *content;
+    size_t  content_size;
     struct  s_list  *next;
-}                           t_list;
-
+}   t_list;
+/*if after this i type "struct s_list file" i am creating a variable called file with the member that
+were inside my s_list struct, i can keep adding other variables as long*/
 
 
 int		ft_tolower(int c);
@@ -67,8 +72,8 @@ void	ft_putnbr_fd(int n, int fd);
 
 //Bonus functions
 
-/*t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
+t_list	*ft_lstnew(void *content);
+/*void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
