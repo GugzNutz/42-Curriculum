@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:16:14 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/16 18:47:28 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/17 18:26:59 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ typedef struct s_list
     void    *content;
     size_t  content_size;
     struct  s_list  *next;
-}   t_list;/*this is a variable created in the global scope instead of we creating one in a local scope
+}   t_list;
+/*this is a variable created in the global scope instead of we creating one in a local scope
 like in a function outside or a main*/
 /*if after this i type "struct s_list file" i am creating a variable called file with the member that
 were inside my s_list struct, i can keep adding other variables as long*/
