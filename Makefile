@@ -6,7 +6,7 @@
 #    By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 14:42:52 by gfilipe-          #+#    #+#              #
-#    Updated: 2022/11/15 17:35:30 by gfilipe-         ###   ########.fr        #
+#    Updated: 2022/11/23 19:06:58 by gfilipe-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,12 @@ NAME = libft.a
 # Wildcard to select all files ending with c, then replacing them with .o
 # o standing for object files
 SRC := $(wildcard *.c)
-SRC := $(filter-out ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c, $(SRC))
+SRC := $(filter-out ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
+ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c, $(SRC))
 # = Stands for recursively expanded variable, keeps on adding until it finishes
 OBJS = $(SRC:.c=.o)
-BNS = ft_lstnew.c \
-ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+BNS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+ft_lstlast.c ft_lstadd_back.c \
 ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 BONUS = $(BNS:.c=.o)
 
@@ -45,9 +46,9 @@ clean:
 	${RM} $(OBJS) $(BONUS)
 
 fclean: clean 
-		${RM} ${NAME}
+		${RM} ${NAME} 
 		
-re: clean all
+re: fclean ${NAME}
 # Phony lists non-physical targets that are out of date
 # Because of that they are always executed, normally all and clean
 .PHONY: all clean fclean re bonus

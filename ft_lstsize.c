@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 17:39:50 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/15 09:24:58 by gfilipe-         ###   ########.fr       */
+/*   Created: 2022/11/23 18:16:01 by gfilipe-          #+#    #+#             */
+/*   Updated: 2022/11/24 12:58:43 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_atoi(const char *str)
+/*percorremos a lista toda ate next chegar a null(nao ha mais items na lista)
+e isso da-nos o size da lista*/
+int	ft_lstsize(t_list *lst)
 {
-	unsigned int	i;
-	int				neg;
-	long int		result;
+	int	i;
 
 	i = 0;
-	neg = 1;
-	result = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (lst != NULL)
 	{
-		if (str[i] == '-')
-			neg *= -1;
+		lst = lst->next;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - 48);
-		i++;
-	}
-	return (result * neg);
+	return (i);
 }
