@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:16:14 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/24 13:32:33 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/28 15:33:05 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ existing data type and INT is the new data type*/
 typedef struct s_list
 {
 	void			*content;
-	//size_t			content_size;
 	struct s_list	*next;
 }	t_list;
 /*this is a variable created in the global scope 
@@ -83,12 +82,12 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
-/*void	ft_lstdelone(t_list *lst, void (*del)(void
+void	ft_lstdelone(t_list *lst, void (*del)(void
 *));
 void	ft_lstclear(t_list **lst, void (*del)(void
 *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list 	*ft_lstmap(t_list *lst, void *(*f)(void *),
+/*t_list 	*ft_lstmap(t_list *lst, void *(*f)(void *),
 void (*del)(void *));
 */
 #endif
