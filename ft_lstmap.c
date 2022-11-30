@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 15:39:13 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/30 17:34:48 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/30 17:49:52 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,19 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*sub;
 	t_list	*new;
 
-	/*if (!lst || !del || !f)
-		return ;*/
 	if (lst == NULL)
 		return (NULL);
-	new = 0;
+	new = NULL;
 	while (lst != NULL)
 	{
-		sub = ft_lstnew(f(lst->content));
-		if (sub == NULL)
+		sub = ft_lstnew(f(lst->content));//o meu sub guarda o conteudo da lista depois da funcao f
+		if (sub == NULL)//se o conteudo for null apago e retorno
 		{
 			ft_lstclear(&sub, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&new, sub);
-		lst = lst->next;
+		ft_lstadd_back(&new, sub);//quando o meu sub nao e null adiciono a lst new
+		lst = lst->next;//e avanco na lst antes de percorrer os mesmos passos antes
 	}
 	return (new);
 }
