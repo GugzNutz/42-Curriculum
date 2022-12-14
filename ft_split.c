@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 09:25:03 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/14 09:25:12 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/12/14 17:05:28 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	ft_count_word(char const *s, char c)
 {
-	int i;
-	int word;
+	int	i;
+	int	word;
 
 	i = 0;
 	word = 0;
@@ -53,7 +53,7 @@ static void	ft_free(char **strs, int j)
 	free(strs);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		word;
