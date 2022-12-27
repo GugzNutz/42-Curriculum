@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 08:23:19 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/12/27 12:16:18 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/12/27 12:28:18 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void	write_word(char *dest, const char *from, char set)
 	dest[i] = '\0';
 }
 
-static int	write_split(char **split, const char *str, char set)
+static int	write_split(char **sbstr, const char *str, char set)
 {
 	int		i;
 	int		j;
@@ -66,10 +66,10 @@ static int	write_split(char **split, const char *str, char set)
 			j = 0;
 			while ((str[i + j] == set || str[i + j] == '\0') == 0)
 				j++;
-			(split[word] = (char *)malloc(sizeof(char) * (j + 1)));
-			if (split == NULL)
-				return (motion(split, word - 1));
-			write_word(split[word], str + i, set);
+			(sbstr[word] = (char *)malloc(sizeof(char) * (j + 1)));
+			if (sbstr == NULL)
+				return (motion(sbstr, word - 1));
+			write_word(sbstr[word], str + i, set);
 			i += j;
 			word++;
 		}
