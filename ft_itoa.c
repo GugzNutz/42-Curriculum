@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:19:21 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/14 10:37:06 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/12/01 08:36:59 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//a funcao itoa 
 int	ft_value(long j)
 {
 	int	counter;

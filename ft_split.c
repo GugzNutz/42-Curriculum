@@ -5,79 +5,46 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 09:25:03 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/12/14 17:05:28 by gfilipe-         ###   ########.fr       */
+/*   Created: 2022/12/27 08:23:19 by gfilipe-          #+#    #+#             */
+/*   Updated: 2022/12/27 11:58:36 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_count_word(char const *s, char c)
+/*Serves to count the words in the initial string*/
+int	ft_wordcount(const char *str, char sep)
 {
+	int	count;
 	int	i;
-	int	word;
 
 	i = 0;
-	word = 0;
-	while (s && s[i])
+	count = 0;
+	while (str[i])
 	{
-		if (s[i] != c)
-		{
-			word++;
-			while (s[i] != c && s[i])
-				i++;
-		}
-		else
+		while (str[i] == sep)
 			i++;
+		if (str[i])
+		{
+			while (str[i] && str[i] != sep)
+				i++;
+			count++;
+		}
 	}
-	return (word);
+	return (count);
 }
 
-static int	ft_size_word(char const *s, char c, int i)
+int	ft_wordlen(char const *str, char sep, int i)
 {
-	int	size;
+	int	len;
 
-	size = 0;
-	while (s[i] != c && s[i])
+	len = 0;
+	while (str[i] != sep && str[i])
 	{
-		size++;
 		i++;
+		len++;
 	}
-	return (size);
-}
-
-static void	ft_free(char **strs, int j)
-{
-	while (j-- > 0)
-		free(strs[j]);
-	free(strs);
+	return (len);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		word;
-	char	**strs;
-	int		size;
-	int		j;
-
-	i = 0;
-	j = -1;
-	word = ft_count_word(s, c);
-	if (!(strs = (char **)malloc((word + 1) * sizeof(char *))))
-		return (NULL);
-	while (++j < word)
-	{
-		while (s[i] == c)
-			i++;
-		size = ft_size_word(s, c, i);
-		if (!(strs[j] = ft_substr(s, i, size)))
-		{
-			ft_free(strs, j);
-			return (NULL);
-		}
-		i += size;
-	}
-	strs[j] = 0;
-	return (strs);
-}

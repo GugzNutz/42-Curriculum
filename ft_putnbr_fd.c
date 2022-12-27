@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:25:29 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/14 14:59:41 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2022/11/23 16:52:02 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	 char	c;
-	 long int	i;
+	char		c;
+	long int	i;
 
-	 i = n;
+	i = n;
 	if (i < 0)
 	{
 		write(fd, "-", 1);
