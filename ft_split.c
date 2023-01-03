@@ -6,13 +6,68 @@
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 08:23:19 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/12/27 12:28:18 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2023/01/03 15:47:48 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	motion(char **str, int size)
+static void	ft_alloc(char **spa, char const *s, char sep)
+{
+	char		**spar;
+	char const	*tmp;
+
+	tmp = s;
+	spar = spa;
+	while (*tmp)
+	{
+		while (*s == sep)
+			++s;
+		tmp = s;
+		while (*tmp && *tmp != sep)
+			++tmp;
+		if (*tmp == sep || tmp > s)
+		{
+			*spar = ft_substr(s, 0, tmp - s);
+			s = tmp;
+			++spar;
+		}
+	}
+	*spar = NULL;
+}
+
+static int	ft_count_words(char const *s, char sep)
+{
+	int	word_count;
+
+	word_count = 0;
+	while (*s)
+	{
+		while (*s == sep)
+			++s;
+		if (*s)
+			++word_count;
+		while (*s && *s != sep)
+			++s;
+	}
+	return (word_count);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**new;
+	int		size;
+
+	if (!s)
+		return (NULL);
+	size = ft_count_words(s, c);
+	new = (char **)malloc(sizeof(char *) * (size + 1));
+	if (!new)
+		return (NULL);
+	ft_alloc(new, s, c);
+	return (new);
+}
+/*static int	motion(char **str, int size)
 {
 	while (size--)
 		free(str[size]);
@@ -91,7 +146,7 @@ char	**ft_split(const char *str, char c)
 		return (NULL);
 	return (res);
 }
-/*int	ft_wordcount(const char *str, char sep)
+int	ft_wordcount(const char *str, char sep)
 {
 	int	count;
 	int	i;

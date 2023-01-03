@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 13:33:03 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/10 10:54:20 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2023/01/03 15:56:07 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+// returns characters from the string value for the size defined
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*ptr;
