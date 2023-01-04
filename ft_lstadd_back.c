@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:24:55 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/24 15:14:54 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2023/01/04 12:40:03 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 enquanto a lista nao chegar ao fim ele percorre-a,
 quando chegar ao fim, antes do NULL diz que a
 proxima posicao na lista e o new*/
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *temp;
+	t_list	*temp;
 
-	if(lst)
+	if (lst)
 	{
 		if (*lst == NULL)
 		{

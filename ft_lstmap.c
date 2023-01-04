@@ -6,13 +6,13 @@
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 15:39:13 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/30 17:49:52 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2023/01/04 12:38:19 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+/* o meu sub guarda o conteudo da lista depois da funcao f */
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*sub;
 	t_list	*new;
@@ -22,18 +22,20 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new = NULL;
 	while (lst != NULL)
 	{
-		sub = ft_lstnew(f(lst->content));//o meu sub guarda o conteudo da lista depois da funcao f
-		if (sub == NULL)//se o conteudo for null apago e retorno
+		sub = ft_lstnew(f(lst->content));
+		if (sub == NULL)
 		{
 			ft_lstclear(&sub, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&new, sub);//quando o meu sub nao e null adiciono a lst new
-		lst = lst->next;//e avanco na lst antes de percorrer os mesmos passos antes
+		ft_lstadd_back(&new, sub);
+		lst = lst->next;
 	}
 	return (new);
 }
-
+/* se o conteudo for null apago e retorno 
+quando o meu sub nao e null adiciono a lst new
+e avanco na lst antes de percorrer os mesmos passos antes */
 	/*t_list	*first;
 	t_list	*new;
 
