@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:54:49 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/11/03 12:32:34 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2023/01/04 13:19:15 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,8 @@ char	*ft_strrchr(const char *s, int c)
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (s[i] == c)
-		{
+		if (s[i] == (char)c)
 			return ((char *)s + i);
-		}
 		i--;
 	}
 	return (NULL);
