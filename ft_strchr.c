@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:09:35 by gfilipe-          #+#    #+#             */
-/*   Updated: 2023/01/04 13:02:23 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2023/01/04 13:23:45 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ char
 		return (NULL);
 	while (s[i])
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
+		if (s[i] == (char) c)
+			return (s + i);
 		i++;
 	}
 	if (s[i] == (char)c)
