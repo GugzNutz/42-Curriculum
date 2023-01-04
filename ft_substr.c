@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 13:33:03 by gfilipe-          #+#    #+#             */
-/*   Updated: 2023/01/04 14:48:38 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2023/01/04 15:03:30 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,25 @@
 	ptr[j] = NULL;
 	return (ptr);
 }*/
+/*if start is bigger than strlen of s
+i need to str dup an empty string otherwise
+i have memory leaks or sigsegv fault
+can t be null just have to put an ""*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*subst;
-	size_t	size;
+	char	*ptr;
+	size_t	lenght;
 
-	if (!s)
-		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
-	size = ft_strlen(s + start);
-	if (size < len)
-		len = size;
-	subst = (char *)malloc(sizeof(char) * (len + 1));
-	if (!subst)
+	lenght = ft_strlen(s + start);
+	if (lenght < len)
+		len = lenght;
+	ptr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!ptr)
 		return (NULL);
-	ft_strlcpy(subst, s + start, len + 1);
-	return (subst);
+	if (!s)
+		return (NULL);
+	ft_strlcpy(ptr, s + start, len + 1);
+	return (ptr);
 }
