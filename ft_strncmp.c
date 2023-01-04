@@ -6,7 +6,7 @@
 /*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 13:24:52 by gfilipe-          #+#    #+#             */
-/*   Updated: 2022/12/14 16:55:15 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2023/01/04 14:30:21 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	if (i < n)
 		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	return (0);
+	return (NULL);
 }
