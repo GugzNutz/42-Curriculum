@@ -6,7 +6,7 @@
 #    By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 14:42:52 by gfilipe-          #+#    #+#              #
-#    Updated: 2023/01/05 10:28:47 by gfilipe-         ###   ########.fr        #
+#    Updated: 2023/01/05 10:56:15 by gfilipe-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,8 +34,9 @@ FLAGS = -Wall -Wextra -Werror
 all: ${NAME}
 # https://earthly.dev/blog/using-makefile-wildcards/
 # rm -f *.o remove all files that end with .o
-# .c.o:
-# ${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+.c.o:
+	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+	
 $(NAME):  ${OBJS}
 	${AR} ${NAME} ${OBJS}
 
