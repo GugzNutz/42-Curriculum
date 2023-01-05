@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfilipe- <gfilipe-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: gfilipe- <gfilipe-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:09:35 by gfilipe-          #+#    #+#             */
-/*   Updated: 2023/01/04 13:23:45 by gfilipe-         ###   ########.fr       */
+/*   Updated: 2023/01/05 10:24:13 by gfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,10 @@ char
 	int	i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
 	while (s[i])
 	{
 		if (s[i] == (char) c)
-			return (s + i);
+			return ((char *)s + i);
 		i++;
 	}
 	if (s[i] == (char)c)
